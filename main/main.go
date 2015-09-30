@@ -12,6 +12,7 @@ import (
 	"path/filepath"
 	"os"
 	"fmt"
+	"io/ioutil"
 )
 
 func main() {
@@ -20,6 +21,17 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(dir)
+	fmt.Println(os.Args[0])
+
+	files, _ := ioutil.ReadDir("./")
+	for _, f := range files {
+		fmt.Println(f.Name())
+	}
+
+	files, _ = ioutil.ReadDir("/")
+	for _, f := range files {
+		fmt.Println(f.Name())
+	}
 
 	hooker, err := mgorus.NewHooker(dal.DB_URL, dal.DB_NAME, "logs")
 	if err == nil {
@@ -31,3 +43,5 @@ func main() {
 	log.Info("Starting server")
 	log.Fatal(http.ListenAndServe(":5000", webRouter))
 }
+
+
