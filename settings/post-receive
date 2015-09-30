@@ -19,10 +19,10 @@ go test ./...
 docker stop mongodb
 
 #git init .git
-#go env
-#whoami
-#pwd
-#godep save ./...
+go env
+whoami
+pwd
+godep save ./...
 
 #git config --global user.email "artem.chuzhmarov@gmail.com"
 #git config --global user.name "Artem Chuzhmarov"
