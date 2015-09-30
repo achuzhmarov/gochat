@@ -7,7 +7,6 @@ rm -rf /home/git/gopath/src/gochat
 mkdir /home/git/gopath/src/gochat
 
 cd /home/git/gopath/src/gochat
-git init .git
 
 git --work-tree=/home/git/gopath/src/gochat --git-dir=/home/git/gochat.git checkout -f
 
