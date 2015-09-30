@@ -1,4 +1,3 @@
 #!/bin/sh
 git --work-tree=gopath/src/gochat --git-dir=gochat.git checkout -f
 
-
