@@ -9,7 +9,7 @@ import (
 
 var environments = map[string]string{
 	"production":    "/Users/artemchuzhmarov/Desktop/IdeaWorkspace/chat/src/settings/prod.json",
-	"preproduction": "/Users/artemchuzhmarov/Desktop/IdeaWorkspace/chat/src/settings/pre.json",
+	"preproduction": "/app/settings/pre.json",
 	"mac":           "/Users/artemchuzhmarov/Desktop/IdeaWorkspace/chat/src/settings/mac.json",
 	"windows":       "E:\\work\\gopath\\src\\gochat\\settings\\windows.json",
 }
