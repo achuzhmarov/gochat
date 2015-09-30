@@ -12,8 +12,6 @@ git --work-tree=/home/git/gopath/src/gochat --git-dir=/home/git/gochat.git check
 
 go install gochat/main
 
-#docker run --name mongodb -p 33333:27017 -d mongo
-
 docker start mongodb
 
 go test ./...
