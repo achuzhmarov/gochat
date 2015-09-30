@@ -20,5 +20,4 @@ func main() {
 
 	log.Info("Starting server")
 	log.Fatal(http.ListenAndServe(":8080", webRouter))
-	
 }
