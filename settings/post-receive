@@ -27,5 +27,5 @@ git config --global user.name "Artem Chuzhmarov"
 git init
 git add .
 git commit -m "add dependencies"
-#git remote add ocean dokku@46.101.198.165:gochat
-#git push ocean master
+git remote add ocean dokku@46.101.198.165:gochat
+git push ocean master
