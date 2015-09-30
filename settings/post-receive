@@ -11,7 +11,7 @@ git init
 
 git --work-tree=/home/git/gopath/src/gochat --git-dir=/home/git/gochat.git checkout -f
 
-go build main
+go build gochat/main
 
 docker start mongodb
 
