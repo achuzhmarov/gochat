@@ -12,6 +12,7 @@ import (
 var GenericDao = sessionWrapper{initSession()}
 var DB_HOST = os.Getenv("MONGO_PORT_27017_TCP_ADDR")
 var DB_PORT = os.Getenv("MONGO_PORT_27017_TCP_PORT")
+var DB_URL = DB_HOST + ":" + DB_PORT
 
 const DB_NAME = "gochat"
 
@@ -20,7 +21,7 @@ type sessionWrapper struct {
 }
 
 func initSession() *mgo.Session {
-	session, err := mgo.Dial(DB_HOST + ":" + DB_PORT)
+	session, err := mgo.Dial(DB_URL)
 	if err != nil {
 		panic(err)
 	}
