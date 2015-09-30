@@ -19,5 +19,5 @@ func main() {
 	webRouter := router.NewRouter()
 
 	log.Info("Starting server")
-	log.Fatal(http.ListenAndServe(":8080", webRouter))
+	log.Fatal(http.ListenAndServe(":5000", webRouter))
 }

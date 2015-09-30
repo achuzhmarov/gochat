@@ -10,9 +10,6 @@ import (
 )
 
 var GenericDao = sessionWrapper{initSession()}
-/*var DB_HOST = os.Getenv("MONGO_PORT_27017_TCP_ADDR")
-var DB_PORT = os.Getenv("MONGO_PORT_27017_TCP_PORT")
-var DB_URL = DB_HOST + ":" + DB_PORT*/
 var DB_URL = os.Getenv("MONGO_URL")
 
 const DB_NAME = "gochat"
