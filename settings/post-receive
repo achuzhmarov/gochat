@@ -1,6 +1,4 @@
 #!/bin/sh
-docker start mongodb
-
 export GOPATH=/home/git/gopath
 export PATH=$PATH:$GOPATH/bin
 export DATABASE_URL=127.0.0.1:33333
@@ -12,6 +10,10 @@ cd /home/git/gopath/src/gochat
 git init
 
 git --work-tree=/home/git/gopath/src/gochat --git-dir=/home/git/gochat.git checkout -f
+
+go build main
+
+docker start mongodb
 
 go test ./...
 
