@@ -1,6 +1,7 @@
 #!/bin/sh
+export GOROOT=/usr/lib/go
 export GOPATH=/home/git/gopath
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 export DATABASE_URL=127.0.0.1:33333
 
 rm -rf /home/git/gopath/src/gochat
@@ -12,11 +13,9 @@ git --work-tree=/home/git/gopath/src/gochat --git-dir=/home/git/gochat.git check
 
 go install gochat/main
 
-docker start mongodb
-
-go test ./...
-
-docker stop mongodb
+#docker start mongodb
+#go test ./...
+#docker stop mongodb
 
 unset GIT_DIR
 godep save ./...
