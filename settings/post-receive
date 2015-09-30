@@ -18,9 +18,8 @@ go test ./...
 
 docker stop mongodb
 
+git init
 godep save ./...
-
-#git init?
 
 #git config --global user.email "artem.chuzhmarov@gmail.com"
 #git config --global user.name "Artem Chuzhmarov"
