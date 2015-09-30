@@ -1,31 +1,38 @@
 #!/bin/sh
-export GOROOT=/usr/lib/go
-export GOPATH=/home/git/gopath
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-export DATABASE_URL=127.0.0.1:33333
+while read oldrev newrev refname
+do
+    branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+    if [ "master" == "$branch" ]; then
+        export GOROOT=/usr/lib/go
+	export GOPATH=/home/git/gopath
+	export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+	export DATABASE_URL=127.0.0.1:33333
 
-rm -rf /home/git/gopath/src/gochat
-mkdir /home/git/gopath/src/gochat
+	rm -rf /home/git/gopath/src/gochat
+	mkdir /home/git/gopath/src/gochat
 
-cd /home/git/gopath/src/gochat
+	cd /home/git/gopath/src/gochat
 
-git --work-tree=/home/git/gopath/src/gochat --git-dir=/home/git/gochat.git checkout -f
+	git --work-tree=/home/git/gopath/src/gochat --git-dir=/home/git/gochat.git checkout -f
 
-go install gochat/main
+	go install gochat/main
 
-#docker start mongodb
-#go test ./...
-#docker stop mongodb
+	#docker start mongodb
+	#go test ./...
+	#docker stop mongodb
 
-unset GIT_DIR
-godep save ./...
+	unset GIT_DIR
+	godep save ./...
 
-git config --global user.email "artem.chuzhmarov@gmail.com"
-git config --global user.name "Artem Chuzhmarov"
+	git config --global user.email "artem.chuzhmarov@gmail.com"
+	git config --global user.name "Artem Chuzhmarov"
 
-git init
-git add .
-git commit -m "add dependencies"
-git remote add ocean dokku@46.101.198.165:gochat
+	git init
+	git add .
+	git commit -m "add dependencies"
+	git remote add ocean dokku@46.101.198.165:gochat
 
-git push ocean master -f
+	git push ocean master -f
+         fi
+done
+
