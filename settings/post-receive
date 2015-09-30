@@ -18,14 +18,14 @@ go test ./...
 
 docker stop mongodb
 
-#git init .git
 unset GIT_DIR
 godep save ./...
 
-#git config --global user.email "artem.chuzhmarov@gmail.com"
-#git config --global user.name "Artem Chuzhmarov"
+git config --global user.email "artem.chuzhmarov@gmail.com"
+git config --global user.name "Artem Chuzhmarov"
 
-#git add .
-#git commit -m "add dependencies"
+git init
+git add .
+git commit -m "add dependencies"
 #git remote add ocean dokku@46.101.198.165:gochat
 #git push ocean master
