@@ -69,11 +69,11 @@ func TestGetNewFriends_ok_noErrors(t *testing.T) {
 func TestMakeFriends_ok_noErrors(t *testing.T) {
 	initUsers()
 
-	err := TestUserService.MakeFriends("user333", "user444")
+	_, err := TestUserService.MakeFriends("user333", "user444")
 	test.TestForError(t, err)
-	err = TestUserService.MakeFriends("user333", "user")
+	_, err = TestUserService.MakeFriends("user333", "user")
 	test.TestForError(t, err)
-	err = TestUserService.MakeFriends("user444", "user")
+	_, err = TestUserService.MakeFriends("user444", "user")
 	test.TestForError(t, err)
 
 	user333, err := TestUserService.GetUserByLogin("user333")
