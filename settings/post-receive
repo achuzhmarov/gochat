@@ -28,4 +28,7 @@ git init
 git add .
 git commit -m "add dependencies"
 git remote add ocean dokku@46.101.198.165:gochat
+
+export DOKKU_NGINX_PORT=42042
+
 git push ocean master
