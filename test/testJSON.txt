@@ -1,0 +1,49 @@
+UserAuth:
+{
+    "login": "user",
+    "password": "user_pass"
+}
+
+55fe86cb9197d9a713000001
+
+NewMessage:
+{
+    "talk_id": "55fe86cb9197d9a713000001",
+    "author": "user",
+    "words": [
+      {
+        "text": "WAT",
+        "additional": "?",
+        "ciphered_text": "W",
+        "word_type": 1
+      },
+      {
+        "text": "WOT",
+        "additional": "!!",
+        "ciphered_text": "W",
+        "word_type": 1
+      }
+    ],
+    "deciphered": false,
+    "cipher_type": 1,
+    "timestamp": "2015-09-20T15:01:25.836+03:00"
+}
+
+DecipheredMessage:
+{
+    "id": "55feb0779197d9c0e6000001",
+    "words": [
+      {
+        "text": "WAT",
+        "additional": "?",
+        "ciphered_text": "W",
+        "word_type": 2
+      },
+      {
+        "text": "WOT",
+        "additional": "!!",
+        "ciphered_text": "W",
+        "word_type": 3
+      }
+    ]
+}

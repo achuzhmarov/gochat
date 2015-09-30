@@ -1,0 +1,5 @@
+{
+  "PrivateKeyPath": "/Users/artemchuzhmarov/Desktop/IdeaWorkspace/chat/src/settings/keys/private_key",
+  "PublicKeyPath": "/Users/artemchuzhmarov/Desktop/IdeaWorkspace/chat/src/settings/keys/public_key.pub",
+  "JWTExpirationDelta": 72
+}

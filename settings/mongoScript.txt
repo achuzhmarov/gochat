@@ -1,0 +1,22 @@
+//add expire index for tokens
+db.tokens.createIndex( { "expire_at": 1 }, { expireAfterSeconds: 0 } )
+
+//add indexes for user
+db.messages.createIndex( { "login" : 1 } )
+db.messages.createIndex( { "friends" : 1 } )
+db.messages.createIndex( { "rating" : 1 } )
+db.messages.createIndex( { "talks._id" : 1 } )
+db.messages.createIndex( { "talks.has_unread" : 1 } )
+db.messages.createIndex( { "talks.ciphered_num" : 1 } )
+db.messages.createIndex( { "login" : 1, "talks._id" : 1 } )
+db.messages.createIndex( { "login" : 1, "talks.has_unread" : 1 } )
+db.messages.createIndex( { "login" : 1, "talks.ciphered_num" : 1 } )
+
+//add indexes for messages
+db.messages.createIndex( { "_talk_id" : 1 } )
+db.messages.createIndex( { "timestamp" : 1 } )
+db.messages.createIndex( { "_talk_id" : 1 , "timestamp" : 1 } )
+
+//add indexes for logs
+db.logs.createIndex( { "Time" : 1 } )
+db.logs.createIndex( { "Level" : 1 } )

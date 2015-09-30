@@ -1,0 +1,5 @@
+{
+  "PrivateKeyPath": "E:\work\gopath\src\gochat\settings\keys\private_key",
+  "PublicKeyPath": "E:\work\gopath\src\gochat\settings\keys\public_key.pub",
+  "JWTExpirationDelta": 72
+}
