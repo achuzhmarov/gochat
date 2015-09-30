@@ -19,9 +19,7 @@ go test ./...
 docker stop mongodb
 
 #git init .git
-go env
-whoami
-pwd
+unset GIT_DIR
 godep save ./...
 
 #git config --global user.email "artem.chuzhmarov@gmail.com"
