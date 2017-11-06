@@ -1,3 +1,3 @@
 # gochat
 
-Backend for a pet project for ios (written in golang)
+Backend for an ios pet project (written in golang)
